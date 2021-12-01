@@ -1,0 +1,22 @@
+{
+        
+    "id": 766013637,
+    "nickname": "TETE6072056",
+    "password": "qatest2109",
+    "site_status": "active",
+    "email": "test_user_59864266@testuser.com",
+    "created_At": "27/5/2021",
+    "credentials":{
+        "test":{
+            "puclic_key":"TEST-feeebd2b-66e1-4afc-8f37-63e9768e11b5",
+            "token": "TEST-5405428479201455-052713-a7862bf64d96baac8a67a99925831d75-766013637"
+
+        },
+        "production":{
+            "puclic_key":"APP_USR-a8d31aff-668e-4868-b179-726e366e19a3",
+            "token": "APP_USR-5405428479201455-052713-68a302c1b991aa49b0197cda3530e1d8-766013637",
+            "clientID":"5405428479201455",
+            "client_secret":"x5BaR1P76xZz6ywlTn0GZ2yA3bMeMZd4"
+        }
+    }
+}

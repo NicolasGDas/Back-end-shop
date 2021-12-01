@@ -1,0 +1,22 @@
+[
+    {
+        "id":"1",
+        "meses":"1 mes",
+        "precio": 100
+    },
+    {
+        "id":"2",
+        "meses":"2 meses ",
+        "precio": 190
+    },
+    {
+        "id":"3",
+        "meses":"3 meses ",
+        "precio": 270
+    },
+    {
+        "id":"4",
+        "meses":"6 meses",
+        "precio": 500
+    }
+]
