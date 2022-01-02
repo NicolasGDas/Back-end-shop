@@ -1,5 +1,5 @@
 import Factory_CU_seleccionar_sub from "./Venta/Negocio/Caso_de_uso_seleccionar_subscripcion/Factory_CU_select_sub.js"
-import Dao_ClientesFactory from "./Venta/Persistencia/Dao_ClientesFactory.js";
+import Dao_usersFactory from "./Venta/Persistencia/Dao_UsersFactory.js";
 import Dao_SubFactory from './Venta/Persistencia/Dao_SubFactory.js'
 
 function crearApiSelect(){
@@ -11,10 +11,10 @@ function crearApiSelect(){
             return await cu_Select_Select.realizar(datosSelect)
         },
         cerrar: async() =>{
-            const daoClientes = Dao_ClientesFactory.getDaoClientes()
+            const daousers = Dao_usersFactory.getDaoUsers()
             const daoSubs = Dao_SubFactory.getDaoSub()
 
-            await daoClientes.cerrar()
+            await daousers.cerrar()
             await daoSubs.cerrar()
         }
     }

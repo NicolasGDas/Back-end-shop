@@ -1,7 +1,7 @@
 import Caso_de_uso_seleccionar_subscripcion from "./Caso_de_uso_seleccionar_subscripcion.js";
 import cliente_mp from '../../Modulos/Mercado_pago.js'
 import {obtener_datos} from '../../../Compartido/lector_datos/obtener_datos.js'
-import DaoFactory from "../../../Venta/Persistencia/Dao_ClientesFactory.js"
+import DaoFactory from "../../../Venta/Persistencia/Dao_UsersFactory.js"
 import Dao_SubFactory from "../../Persistencia/Dao_SubFactory.js";
 
 
@@ -12,7 +12,7 @@ const vendedor = new cliente_mp(token_vendedor)
 
 function crearCU_select_subscription(){
     const cu_confirm_sub = new Caso_de_uso_seleccionar_subscripcion(
-        DaoFactory.getDaoClientes(),
+        DaoFactory.getDaoUsers(),
         vendedor,
         Dao_SubFactory.getDaoSub()
     )

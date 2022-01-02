@@ -1,8 +1,8 @@
 
 
 export default class Caso_de_uso_seleccionar_subscripcion{
-    constructor(dao_clientes,vendedor,subscipcion){
-        this.dao_clientes= dao_clientes,
+    constructor(dao_users,vendedor,subscipcion){
+        this.dao_users= dao_users,
         this.vendedor= vendedor,
         this.subscipcion = subscipcion
     }
@@ -10,9 +10,9 @@ export default class Caso_de_uso_seleccionar_subscripcion{
 
     async realizar(param){
         
-        const cliente                    = await this.dao_clientes.getById(param.id)
+        const user                    = await this.dao_users.getById(param.id)
         const subscription_deseada       = await this.subscipcion.getById(param.sub)
-        const {init_point:link_pago}     = await this.vendedor.crear_venta(subscription_deseada,cliente.id)
+        const {init_point:link_pago}     = await this.vendedor.crear_venta(subscription_deseada,user.id)
         // const link_pago             = venta["init_point"]
         return link_pago
         

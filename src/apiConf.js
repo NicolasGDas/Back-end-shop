@@ -1,5 +1,5 @@
 import Factory_CU_confirmar_sub from "./Venta/Negocio/Caso_de_uso_confirmar_subscripcion/Factory_CU_confirmar_sub.js";
-import Dao_ClientesFactory from "./Venta/Persistencia/Dao_ClientesFactory.js";
+import Dao_usersFactory from "./Venta/Persistencia/Dao_UsersFactory.js";
 
 
 function crearApiConf(){
@@ -12,9 +12,9 @@ function crearApiConf(){
         },
         cerrar: async() =>{
             
-            const daoClientes = Dao_ClientesFactory.getDaoClientes()
+            const daousers = Dao_usersFactory.getDaoUsers()
             
-            await daoClientes.cerrar()
+            await daousers.cerrar()
 
         }
     }
