@@ -1,5 +1,5 @@
-import Factory_CU_add_product from "./Venta/Negocio/Caso_de_uso_add_product/Factory_CU_add_product.js";
-import Dao_ProductsFactory from "./Venta/Persistencia/Dao_ProductsFactory.js";
+import Factory_CU_add_product from "../Venta/Negocio/Caso_de_uso_add_product/Factory_CU_add_product.js";
+import Dao_ProductsFactory from "../Venta/Persistencia/Dao_ProductsFactory.js";
 
 
 function crearApiProd(){
