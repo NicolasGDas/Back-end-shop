@@ -6,15 +6,11 @@ import axios from 'axios'
 const apiSelect = crearApiSelect()
 const apiConf = crearApiConf()
 
-
-
-
 const servidor = crearServidor({apiSelect,apiConf})
 
 const port = 3000
 
 await servidor.conectar(port)
-
 
 
 console.log("-----------------------Testeando la seleccion de sub-----------------------")

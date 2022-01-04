@@ -1,37 +1,42 @@
-import {crearServidor} from '../../src/Compartido/servidor/servidor.js'
-import { crearApiProd } from '../../src/apiaddProd.js'
-import { crearApiConf } from '../../src/apiConf.js'
-import { crearApiSelect } from '../../src/apiSelect.js'
-import axios from 'axios'
+import {crearServidor} from '../../src/Compartido/servidor/servidor.js';
+import { crearApiProd } from '../../src/Apis/apiAddProd.js';
+import axios from 'axios';
 
 
 const apiAddProd = crearApiProd()
-const apiSelect = crearApiSelect()
-const apiConf = crearApiConf()
 
-
-
-// const servidor = crearServidor({apiSelect,apiConf,apiAddProd})
 const servidor = crearServidor({apiAddProd})
 
 const port = 3000
 
 await servidor.conectar(port)
+const cantVisitas = 0
+const created_at = Date.now()
+const imagenUrl = "test"
+let categoria = "Monitores"
+let description = "Monitor LG"
+let marca = "LG"
+let nombre = "Monitor"
+let price = 300
+let stock = 10
 
 console.log("-----------------Test add prod--------------------")
-await axios.post(`http://localhost:${port}/appiAddProd`,
-    {
-        cantVisitas: 10, 
-        categoria: "Categoria Test" , 
-        created_at:"created_atParam Test" ,
-        description: "descriptionParam Test",
-        imagenUrl:"imagenUrlParam Test",
-        marca:"marcaParam Test",
-        nombre:"nombreParam Test",
-        price:"priceParam Test",
-        stock: "stockParam Test"
-    })
 
+
+await axios.post(`http://localhost:${port}/appiAddProd`,
+        {
+            nombre,
+            description,
+            price,
+            stock,
+            marca,
+            categoria,
+            imagenUrl,
+            created_at,
+            cantVisitas 
+        })
 
 await apiAddProd.cerrar()
+
 await servidor.desconectar()
+
