@@ -1,16 +1,20 @@
 import express from 'express'
 import {createRouterSelect} from '../../Venta/Router/Router_select.js'
 import {createRouterConfirm} from '../../Venta/Router/Router_confirm.js'
+import { createRouterAddProduct } from '../../Venta/Router/Router_addProduct.js'
 //rutas
 
-function crearServidor({apiSelect,apiConf}) {
-
+// function crearServidor({apiSelect,apiConf,apiAddProd}) {
+function crearServidor({apiAddProd}) {
     const app = express()
 
     app.use(express.json())
 
-    app.use('/selectsub', createRouterSelect(apiSelect))
-    app.use('/confirmsub', createRouterConfirm(apiConf))
+    app.use('/appiAddProd',createRouterAddProduct(apiAddProd))
+    // app.use('/selectsub', createRouterSelect(apiSelect))
+    // app.use('/confirmsub', createRouterConfirm(apiConf))
+
+
 
     let server = null
 

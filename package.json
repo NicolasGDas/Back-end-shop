@@ -8,9 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "testdev": "node ./test/Server_test/testServer.js"
-
-    
+    "testPrompt": "node ./test/Test_neg/testPrompt.js",
+    "testdev": "node ./test/Server_test/testServer.js",
+    "testAddProd": "node ./test/Server_test/testAddProd.js"
   },
   "author": "",
   "license": "ISC",
@@ -22,6 +22,8 @@
     "express": "^4.17.1",
     "firebase": "^8.6.8",
     "mercadopago": "^1.5.7",
-    "mongodb": "^3.6.9"
+    "mongodb": "^3.6.9",
+    "prompt": "^1.2.0",
+    "prompt-async": "^0.9.9"
   }
 }
